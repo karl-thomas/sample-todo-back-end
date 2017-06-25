@@ -6,8 +6,16 @@
 </h1>
 
 <ul class="card">
-	<li>
-	    <a href="show.html"> Demo A Show Page</a>
-	</li>
+    <!--<%= render @todos %>-->
+    <% @todos.each do |todo| %>
+    <li>
+        <input type="checkbox" name=""/>
+        <a href="/todo/show/<%= todo.id %>">
+            <h2><%=todo.description%></h2>
+        </a>
+        <span class="pomodoro-estimate"><%= todo.pomodoro_estimate%></span>
+    </li>
+    <% end %>
 </ul>
 
+<a href="/todo/new"> LETS ADD A TODO RIGHT HERE BY CLICKING THIS</a>

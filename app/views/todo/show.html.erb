@@ -1,0 +1,13 @@
+<h1>
+      <img class="company-logo" src="https://public.3.basecamp.com/p/iahgNshn1oKq98sWGf1q89Vo/uploads/511042491/download/CodeNow%20Logo.png"></img>
+      Workshop Todo List
+</h1>
+
+<div class="card">
+    <input type="checkbox" name=""/>
+    <h2><%=@todo.description%></h2>
+    <span class="pomodoro-estimate"><%= @todo.pomodoro_estimate%></span>
+    <a href="/todo/edit/<%=@todo.id%>" class="button" id="edit-todo-button">Edit</a>
+    <a href="/todo/delete/<%=@todo.id%>" class="button" id="delete-todo-button">Delete</a>
+    <a href=<%=root_path%> class="simple-link">Go back...</a>
+</div>
