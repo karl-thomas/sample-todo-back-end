@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+todos = 10.times {Todo.create!(description: Faker::Food.spice + ' at ' + Faker::LordOfTheRings.location,
+                     pomodoro_estimate: rand(1..5),
+                     complete: false
+                    )}
